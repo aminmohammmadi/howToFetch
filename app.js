@@ -37,7 +37,10 @@ let makeARow = (newObject) => {
 
 fetch('https://noviceguru.github.io/doveConvieneJson/data/names.json')
 .then(response=>response.json())
-.then(data => data.forEach(el => makeARow))
+.then(data => data.names.forEach(el=>makeARow(el)))
+
+
+
 
 
 
