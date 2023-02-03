@@ -87,13 +87,11 @@ let students = [
 
 //   students.forEach(makeARow)
 
-const addDataToTable = () => {
-    console.log('data is entered')
-fetch('https://noviceguru.github.io/doveConvieneJson/data/names.json')
-.then(response=>response.json())
-.then(data=>data.forEach(el=>makeARow(el)))
-}
-addDataToTable()
+
+    fetch('https://noviceguru.github.io/doveConvieneJson/data/names.json')
+  .then(response=>response.json())
+  .then(data=>data.names.forEach(el=>makeARow(el)))
+
 
   //   .then(data=>console.log(data))
 
