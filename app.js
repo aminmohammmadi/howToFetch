@@ -32,7 +32,7 @@ postButton.onclick =()=>{
         headers:{'content-type': 'application/json'},
         body: JSON.stringify({
             "name": "Zagros",
-             "id": 2
+             "id": Date.now()
             })
     })
     .then(response => response.json())
