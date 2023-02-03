@@ -1,8 +1,8 @@
 {
-    "employees":[
-        {
-        "name": "Amin",
-        "ID": 1
+  "employees": [
+    {
+      "name": "Amin",
+      "ID": 1
     }
-]
+  ]
 }
