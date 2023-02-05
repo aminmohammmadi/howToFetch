@@ -40,6 +40,15 @@
 //     })
 // }
 
+/* EX3
+3. In exercise 1, change your address from https://noviceguru.github.io/doveConvieneJson/data/names.json to http://localhost:3000.
+    Doing this, you will start seeing the data in data.json inside your table.
+    Now:
+        a) Create a button, which adds a row with default values: {name: "name", surname: "surname", studentId: "111111"}
+        b) Create a button on every row, which if clicked, deletes the row.
+        c) Make a form beside the table with "Add" button and "Name", "Surname" and "StudentId" fields. Once values are added to the
+            input fields and the add button clicked, a new row will be added to the table, with the values inserted in the field.
+*/
 
 function makeARow (newObject){
     let newRow = document.createElement ('tr')
@@ -54,49 +63,26 @@ function makeARow (newObject){
 
     newName.innerText = newObject.name
     newSurname.innerText = newObject.surname
-    newStudentID.innerText = newObject.Id
-}
-
-let students = [
-    { name: 'Tobye', surname: 'Arabi', studentId: 675806 },
-    { name: 'Philipa', surname: 'Arabi', studentId: 965805 },
-    { name: 'Ellis', surname: 'Arabi', studentId: 1483719 },
-    { name: 'Brod', surname: 'Arabi', studentId: 1328683 },
-    { name: 'Frederik', surname: 'Arabi', studentId: 1957928 },
-    { name: 'Madonna', surname: 'Arabi', studentId: 1452872 },
-    { name: 'Kaylee', surname: 'Arabi', studentId: 1239936 },
-    { name: 'Isa', surname: 'Arabi', studentId: 1864924 },
-    { name: 'Ebenezer', surname: 'Arabi', studentId: 566258 },
-    { name: 'Stearne', surname: 'Arabi', studentId: 1868364 },
-    { name: 'Keen', surname: 'Arabi', studentId: 1790493 },
-    { name: 'Kalil', surname: 'Arabi', studentId: 282740 },
-    { name: 'Sonnie', surname: 'Arabi', studentId: 249480 },
-    { name: 'Audie', surname: 'Arabi', studentId: 255825 },
-    { name: 'Miles', surname: 'Arabi', studentId: 1050838 },
-    { name: 'Lane', surname: 'Arabi', studentId: 893410 },
-    { name: 'Townsend', surname: 'Arabi', studentId: 1600269 },
-    { name: 'Marty', surname: 'Arabi', studentId: 1974435 },
-    { name: 'Stephi', surname: 'Arabi', studentId: 837243 },
-    { name: 'Stuart', surname: 'Arabi', studentId: 1659992 },
-    { name: 'Antons', surname: 'Arabi', studentId: 224681 },
-    { name: 'Sybille', surname: 'Arabi', studentId: 54335 },
-    { name: 'Charla', surname: 'Arabi', studentId: 1682544 },
-    { name: 'Galvin', surname: 'Arabi', studentId: 1739978 },
-    { name: 'Niki', surname: 'Arabi', studentId: 1148262 }
-  ]
+    newStudentID.innerText = newObject.studentId
 
 
-// nailAcademy.forEach(el=>makeARow(el))
-
-//   students.forEach(makeARow)
-
-
-    fetch('http://localhost:3000/employees')
+    fetch('https://noviceguru.github.io/doveConvieneJson/data/names.json')
   .then(response=>response.json())
-  // .then(data=> data.forEach(el=>makeARow()))
-  .then(data=> data.forEach(el=>makeARow(el)))
+  .then(data=> data.names.forEach(el=>makeARow(el)))
+}
+makeARow()
+
+// let defaultValue = { "name": "name", "surname": "surname", "Id": 111111}
+// makeARow(defaultValue)
 
 
-  //   .then(data=>console.log(data))
-  
+// let firstButton = document.getElementById('firstButton')
+// firstButton.onclick =()=> {
+//   let defaultValue = { "name": "name", "surname": "surname", "Id": 111111}
+//   // makeARow(defaultValue)
+// }
+
+
+
+
 

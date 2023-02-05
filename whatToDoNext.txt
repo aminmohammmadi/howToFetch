@@ -1,0 +1,17 @@
+What to do next:
+    1. Take the rows from https://noviceguru.github.io/doveConvieneJson/data/names.json and render them to the table.
+Please delete the actual hardcoded array that is rendered to the table. I want only the backend data to be rendered to the table.
+    
+    2. Run your json-server by:
+        npx json-server --watch data.json
+    so the json server would start serving your data.json file.
+    Use the app we used today, to add a new student, edit a student and delete a student.
+    At this stage you would be comfortable with Get, Post, Put and Delete requests.
+
+    3. In exercise 1, change your address from https://noviceguru.github.io/doveConvieneJson/data/names.json to http://localhost:3000.
+    Doing this, you will start seeing the data in data.json inside your table.
+    Now:
+        a) Create a button, which adds a row with default values: {name: "name", surname: "surname", studentId: "111111"}
+        b) Create a button on every row, which if clicked, deletes the row.
+        c) Make a form beside the table with "Add" button and "Name", "Surname" and "StudentId" fields. Once values are added to the
+            input fields and the add button clicked, a new row will be added to the table, with the values inserted in the field.
