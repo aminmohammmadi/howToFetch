@@ -54,7 +54,7 @@ function makeARow (newObject){
 
     newName.innerText = newObject.name
     newSurname.innerText = newObject.surname
-    newStudentID.innerText = newObject.studentId
+    newStudentID.innerText = newObject.Id
 }
 
 let students = [
@@ -85,13 +85,18 @@ let students = [
     { name: 'Niki', surname: 'Arabi', studentId: 1148262 }
   ]
 
+
+// nailAcademy.forEach(el=>makeARow(el))
+
 //   students.forEach(makeARow)
 
 
-    fetch('https://noviceguru.github.io/doveConvieneJson/data/names.json')
+    fetch('http://localhost:3000/employees')
   .then(response=>response.json())
-  .then(data=>data.names.forEach(el=>makeARow(el)))
+  // .then(data=> data.forEach(el=>makeARow()))
+  .then(data=> data.forEach(el=>makeARow(el)))
 
 
   //   .then(data=>console.log(data))
+  
 

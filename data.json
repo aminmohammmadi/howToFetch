@@ -2,23 +2,9 @@
   "employees": [
     {
       "name": "Amin",
-      "ID": 1
-    },
-    {
-      "name": "Zagros",
-      "id": 2
-    },
-    {
-      "name": "Zagros",
-      "id": 1675410831668
-    },
-    {
-      "name": "Zagros",
-      "id": 1675410833448
-    },
-    {
-      "name": "Zagros",
-      "id": 1675410835198
+      "surname": "Mohammadi",
+      "Id": 1
     }
+
   ]
 }
